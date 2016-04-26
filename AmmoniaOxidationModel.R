@@ -52,11 +52,15 @@ for(i in 1:1000){
 #Line types correspond to Archaea (dot dash) lty=4 vs Bacteria (solid) lty=1
 #
 #
-abline(h=214132193, lty=4, col="Green")#Bottom Archaea mean CN
+abline(h=118444574, col="Black")#Approximate Total Ammonia oxidizer biomass at surface
 #
+locator("1.2E8")
 #Sum of surface archaea and AOB amoA 111849985
-#Add in percent of Nitrospira based on 16S rRNA community composition data
-#Total ammonia oxidizier biomass
+#Add Nitrospira based on 16S rRNA community composition data divide percent 
+  #population in half
+#
+#376833676*(0.035/2)=6594589
+#Total approximate ammonia oxidizier biomass via qPCR = 118444574 cells/g
 
 
 
