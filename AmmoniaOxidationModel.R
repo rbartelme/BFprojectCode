@@ -29,6 +29,7 @@ biomass <- (omega_x/omega)*(Yao/(1+bao*omega_x))*DeltaAmmonia #Mussman modified 
 biomass.y <- biomass/cell.mass*0.4 #portion of wet sand mass due to water is 0.4g per gram wet weight sand
 #2 zeros removed from y lims; changed xlims to a day
 plot(x=omega_x, y=biomass.y,xlim=c(0,30),ylim=c(0,1e12), col="red",xlab="MCRT in Days",  ylab="Biomass in cells/g sand")
+title(main="Ammonia Oxidizer Biomass as a Function of Mean Cell Residence Time")
 for(i in 1:10000){
   x<-runif(1, 0.01, 30)
   DeltaAmmonia.V<-runif(1,2.67,8.73)
@@ -47,15 +48,11 @@ for(i in 1:1000){
 ##############################################################
 #
 #
-#Add lines with mean copy number by depth, combining bacteria into one taxa
-#Colors correspond to depth
-#Line types correspond to Archaea (dot dash) lty=4 vs Bacteria (solid) lty=1
+abline(h=118444574, lty=2,col="Black")#Approximate Total Ammonia oxidizer biomass at surface based on qPCR estimates
+text(10,1.3e8,font=2,"1.3e8 AOM (cells/g sand) via qPCR",cex=0.8, pos=3,col='black')
+text(9.5,6e11,font=2,"Model Mean AOM Biomass (cells/g sand)", cex=0.8, pos=3, col='red')
 #
-#
-abline(h=118444574, col="Black")#Approximate Total Ammonia oxidizer biomass at surface
-#
-locator("1.2E8")
-#Sum of surface archaea and AOB amoA 111849985
+#Sum of surface archaea and AOB amoA genes 111849985
 #Add Nitrospira based on 16S rRNA community composition data divide percent 
   #population in half
 #
