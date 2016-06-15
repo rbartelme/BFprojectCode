@@ -25,22 +25,24 @@ cell.mass <- 310*cell.volume*(10^-12)
 #used Mussman et al conversion of 310 fg*C/um^3; 10^-12 term converts fg to mg
 #
 biomass <- (omega_x/omega)*(Yao/(1+bao*omega_x))*DeltaAmmonia #Mussman modified Rittman equation
-#convert mL water to g using density of 1g/mL
-biomass.y <- biomass/cell.mass*0.4 #portion of wet sand mass due to water is 0.4g per gram wet weight sand
+biomass <- biomass/630 #630g sand in 1 liter of biofilter water
+biomass.y <- biomass/cell.mass
 #2 zeros removed from y lims; changed xlims to a day
-plot(x=omega_x, y=biomass.y,xlim=c(0,30),ylim=c(1e6,1e12), log="y", col="red",xlab="MCRT in Days",  ylab="Biomass in cells/g sand")
+plot(x=omega_x, y=biomass.y,xlim=c(0,30),ylim=c(1e6,1e10), log="y", col="red",xlab="MCRT in Days",  ylab="Biomass in cells/g sand")
 title(main="Ammonia Oxidizer Biomass\nAs A Function of Mean Cell Residence Time")
 for(i in 1:10000){
   x<-runif(1, 0.01, 30)
   DeltaAmmonia.V<-runif(1,2.67,8.73)
   y<-(x/omega)*(Yao/(1+bao*x))*DeltaAmmonia.V
-  y<-y/cell.mass*0.4
+  y<-y/630
+  y<-y/cell.mass
   points(x=x,y=y,pch=42,col="Grey")
     }
 for(i in 1:1000){
   x<-runif(1, 0.01, 30)
   y<-(x/omega)*(Yao/(1+bao*x))*DeltaAmmonia
-  y<-y/cell.mass*0.4
+  y<-y/630
+  y<-y/cell.mass
   points(x=x,y=y,pch=42,col="Red")
     }
 ##############################################################
