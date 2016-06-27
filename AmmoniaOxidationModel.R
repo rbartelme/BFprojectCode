@@ -50,18 +50,15 @@ for(i in 1:1000){
 ##############################################################
 #
 #
-abline(h=118444574, lty=2,col="Black")#Approximate Total Ammonia oxidizer biomass at surface based on qPCR estimates
-text(10,1.3e8,font=2,"1.3e8 AOM cells via qPCR",cex=0.6, pos=3,col='black')
+abline(h=273703628, lty=2,col="Black")#Approximate Total Ammonia oxidizer biomass at surface based on qPCR estimates
+text(10,1.1e8,font=2,"2.7e8 AOM cells via qPCR",cex=0.8, pos=3,col='black')
 #
 #Add legend for modeled biomass
-legend(locator(1),legend=c("Mean Modeled AOM Biomass","Maximum/Minimum\nModeled AOM Biomass"),pch=c(15,15),col=c("Red","Grey"),cex=0.6,bty="n")
+legend(locator(1),legend=c("Mean Modeled AOM Biomass","Maximum/Minimum\nModeled AOM Biomass"),pch=c(15,15),col=c("Red","Grey"),cex=0.8,bty="n")
 #
 #Sum of surface archaea and AOB amoA genes 111849985
-#Add Nitrospira based on 16S rRNA community composition data divide percent 
-  #population in half
-#
-#376833676*(0.035/2)=6594589
-#Total approximate ammonia oxidizier biomass via qPCR = 118444574 cells/g
+#Assuming two copies of nxrB per comammox cell, 161853643
+#Total approximate ammonia oxidizier biomass via qPCR = 273703628 cells/g
 
 
 
