@@ -51,7 +51,7 @@ for(i in 1:1000){
 #
 #
 abline(h=383162990, lty=2,col="Black")#Approximate Total Ammonia oxidizer biomass at surface based on qPCR estimates
-text(10,1.1e8,font=2,"2.7e8 AOM cells via qPCR",cex=0.8, pos=3,col='black')
+text(10,1.1e8,font=2,"3.8e8 AOM cells via qPCR",cex=0.8, pos=3,col='black')
 #
 #Add legend for modeled biomass
 legend(locator(1),legend=c("Mean Modeled AOM Biomass","Maximum/Minimum\nModeled AOM Biomass"),pch=c(15,15),col=c("Red","Grey"),cex=0.8,bty="n")
